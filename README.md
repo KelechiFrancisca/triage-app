@@ -16,3 +16,5 @@ python app.py
 
 ## Tech
 Python, Gradio, Pandas, Scikit-learn
+
+Live Demo: https://triage-app-3fk6.onrender.com
