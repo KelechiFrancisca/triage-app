@@ -79,10 +79,12 @@ def triage_beautiful(s1, s2, s3, s4, s5):
     if 'Stomach Pain' in symptoms or 'Acidity' in symptoms or 'Vomiting' in symptoms or 'Diarrhoea' in symptoms or 'Constipation' in symptoms or 'Nausea' in symptoms:
         return 'Gastroenterology', '🟡 GP - Within 24hrs', 'See GP within 24hrs. Drink water, avoid spicy food. Rest.'
 
-    # NEUROLOGY - Head / Brain
+        # NEUROLOGY - Head / Brain
     if 'Headache' in symptoms and 'Dizziness' in symptoms:
         return 'Neurology', '🟠 GP - URGENT - See today', 'See doctor today. Possible neurological issue.'
-    if 'Headache' in symptoms or 'Dizziness' in symptoms:
+    if 'Headache' in symptoms and 'Joint Pain' not in symptoms and 'Muscle Pain' not in symptoms and 'Stomach Pain' not in symptoms and 'Acidity' not in symptoms:
+        return 'Neurology', '🟡 GP - Within 24hrs', 'See GP within 24hrs. Rest in quiet room, drink water.'
+    if 'Dizziness' in symptoms and 'Joint Pain' not in symptoms and 'Muscle Pain' not in symptoms and 'Stomach Pain' not in symptoms and 'Acidity' not in symptoms:
         return 'Neurology', '🟡 GP - Within 24hrs', 'See GP within 24hrs. Rest in quiet room, drink water.'
 
     # SKIN
